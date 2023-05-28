@@ -1,0 +1,32 @@
+server:
+  port: 3000
+  servlet:
+    context-path: /api
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+spring:
+  application:
+    name: BACKEND
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:15432/study_project?currentSchema=user_center
+    username: postgres
+    password: 123456
+    hikari:
+      auto-commit: true
+      maximum-pool-size: 10
+      minimum-idle: 1
+
+  flyway:
+    enabled: true
+    default-schema: user_center
+
+logging:
+  level:
+    com.easy.query.core: debug
+
+easy-query:
+  update-strategy: only_not_null_columns

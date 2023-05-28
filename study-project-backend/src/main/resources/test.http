@@ -1,0 +1,7 @@
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+username=user&password=c85f156a-82c4-4020-a8ba-6093d0f2d5ca
+
+###
